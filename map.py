@@ -21,17 +21,19 @@ class gameMap:
                     print("█", end="")
                 else:
                     print("#", end="")
+
     def move(self, direction: str):
-        if direction == "w":
+        if "w" in direction:
             self.PositionY -= 1
-        elif direction == "s":
+        if "s" in direction:
             self.PositionY += 1
-        elif direction == "a":
+        if "a" in direction:
             self.PositionX -= 1
-        elif direction == "d":
+        if "d" in direction:
             self.PositionX += 1
 
-                        # Boundary conditions
+
+        # Boundary conditions
         if self.PositionX < 0:
             self.PositionX = self.Width - 1
         elif self.PositionX >= self.Width:
