@@ -1,4 +1,3 @@
-import keyboard
 from map import *
 
 mapDet = {}
