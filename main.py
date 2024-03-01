@@ -1,8 +1,8 @@
 from map import *
 
 mapDet = {}
-
-map = gameMap(5, 20, 4, 2, mapDet)
+items = ["Test1", "Test2"]
+map = gameMap(10, 40, 4, 2, mapDet, items)
 
 while True:
     map.draw()
@@ -11,4 +11,5 @@ w - up, a - left, s - down, d - right.
 
 x - attack, i - inventory, q - quit.
           ''')
-    map.move(input("\nAction: ").lower())
+    print("\nItem: " + map.item)
+    map.action(input("\nAction: ").lower())
